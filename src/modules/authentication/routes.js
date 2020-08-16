@@ -1,5 +1,6 @@
 import React from "react";
 import { Switch, Route, useRouteMatch } from "react-router-dom";
+import LoginContainer from "./containers/LoginContainer";
 
 export default function AuthenticationRoutes() {
   let match = useRouteMatch();
@@ -10,7 +11,7 @@ export default function AuthenticationRoutes() {
         <h3>Tela de recuperação de senha</h3>
       </Route>
       <Route path={match.path}>
-        <h3>Tela de login</h3>
+        <LoginContainer />
       </Route>
     </Switch>
   );
